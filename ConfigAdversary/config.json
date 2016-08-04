@@ -1,0 +1,19 @@
+[
+    {
+        'attacker': 'Zombie',
+        'enemy': 'Slime',
+        'priority': -1
+    },
+    {
+        'attacker': 'Skeleton',
+        'enemy': 'Bat',
+        'priority': -1
+    },
+    {
+        'attacker': 'Wolf',
+        'enemy': 'Slime',
+        'priority': -1,
+        'checkSight': true,
+        'onlyNearby': false
+    }
+]
