@@ -9,6 +9,7 @@ import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.EntityAIBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.common.FMLLog;
 
 import java.util.List;
@@ -61,6 +62,24 @@ public class AdversaryRegistry {
             // Stringから、クラスを得る
             Class attackerClass = EntityList.NAME_TO_CLASS.get(attackerClassName);
             Class enemyClass = EntityList.NAME_TO_CLASS.get(enemyClassName);
+
+            // Player の場合のみ、特殊対応
+            if(enemyClassName.equals("Player")){
+                enemyClass = EntityPlayer.class;
+            }
+
+            // 登録されていないentityが対象の場合
+            if(attackerClass == null){
+                if(ConfigsCore.isDebugMode){
+                    FMLLog.info("  ERROR: can not found class :[" + attackerClassName + "]");
+                }
+                return;
+            } else if (enemyClass == null){
+                if(ConfigsCore.isDebugMode){
+                    FMLLog.info("  ERROR: can not found class :[" + enemyClassName + "]");
+                }
+                return;
+            }
 
             // attacker が EntityLiving を継承しているか確認する
             // 本modは、attacker の targetAITasks に介入するため、attacker が EntityLiving を継承している事が必要になる
@@ -134,6 +153,10 @@ public class AdversaryRegistry {
 
         for(AdversaryRelation newAdversaryRelation : adversaryMap.get(attackerEntity.getClass()) ){
             Class enemyClass = EntityList.NAME_TO_CLASS.get(newAdversaryRelation.enemy);
+            // Player の場合のみ、特殊対応
+            if(newAdversaryRelation.enemy.equals("Player")){
+                enemyClass = EntityPlayer.class;
+            }
             int chance = 10;
             boolean checkSight = newAdversaryRelation.checkSight;
             boolean onlyNearby = newAdversaryRelation.onlyNearby;

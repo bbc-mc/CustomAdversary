@@ -117,21 +117,21 @@ public class ConfigsCore {
 
             filewriter.write("[\n");
             filewriter.write("    {\n");
-            filewriter.write("        'attacker': 'Zombie',\n");
-            filewriter.write("        'enemy': 'Slime',\n");
-            filewriter.write("        'priority': -1\n");
+            filewriter.write("        \"attacker\": \"Zombie\",\n");
+            filewriter.write("        \"enemy\": \"Slime\",\n");
+            filewriter.write("        \"priority\": -1\n");
             filewriter.write("    },\n");
             filewriter.write("    {\n");
-            filewriter.write("        'attacker': 'Skeleton',\n");
-            filewriter.write("        'enemy': 'Bat',\n");
-            filewriter.write("        'priority': -1\n");
+            filewriter.write("        \"attacker\": \"Skeleton\",\n");
+            filewriter.write("        \"enemy\": \"Bat\",\n");
+            filewriter.write("        \"priority\": -1\n");
             filewriter.write("    },\n");
             filewriter.write("    {\n");
-            filewriter.write("        'attacker': 'Wolf',\n");
-            filewriter.write("        'enemy': 'Slime',\n");
-            filewriter.write("        'priority': -1,\n");
-            filewriter.write("        'checkSight': true,\n");
-            filewriter.write("        'onlyNearby': false\n");
+            filewriter.write("        \"attacker\": \"Wolf\",\n");
+            filewriter.write("        \"enemy\": \"Slime\",\n");
+            filewriter.write("        \"priority\": -1,\n");
+            filewriter.write("        \"checkSight\": true,\n");
+            filewriter.write("        \"onlyNearby\": false\n");
             filewriter.write("    }\n");
             filewriter.write("]");
 

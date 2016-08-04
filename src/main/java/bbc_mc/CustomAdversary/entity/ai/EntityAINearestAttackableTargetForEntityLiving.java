@@ -64,7 +64,7 @@ public class EntityAINearestAttackableTargetForEntityLiving<T extends EntityLivi
         if (this.targetChance > 0 && this.taskOwner.getRNG().nextInt(this.targetChance) != 0) {
             return false;
         } else if (this.targetClass != EntityPlayer.class && this.targetClass != EntityPlayerMP.class) {
-            List<T> list = this.taskOwner.worldObj.<T>getEntitiesWithinAABB(this.targetClass, this.getTargetableArea(this.getTargetDistance()), this.targetEntitySelector);
+            List<T> list = this.taskOwner.worldObj.getEntitiesWithinAABB(this.targetClass, this.getTargetableArea(this.getTargetDistance()), this.targetEntitySelector);
 
             if (list.isEmpty()) {
                 return false;

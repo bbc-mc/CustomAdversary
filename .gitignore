@@ -38,5 +38,5 @@ usernamecache.json
 
 # DO NOT IGNORE files below
 !document/*
-
+!src/*.txt
 nouse
