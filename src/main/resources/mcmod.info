@@ -1,0 +1,16 @@
+[
+{
+  "modid": "customadversary",
+  "name": "Custom Adversary",
+  "description": "You can config which mobs attack to which mob. Enjoy !",
+  "version": "1.0.0",
+  "mcversion": "1.9.4",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["bbc_mc"],
+  "credits": "",
+  "logoFile": "logo/logo_CustomAdversary_2.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

@@ -1,0 +1,17 @@
+<title>
+====
+
+# Entityどうしの敵対を、外部からコントロールできないか
+
+1. [x] EntityJoinWorld イベントで、EntityにAIをぶっこむ
+  - [x] nearest target で、敵対設定の Entity の class をターゲットするようにする
+
+2. [ ] Configファイルで、敵対関係を設定できるようにする
+  - [ ] Configファイルの形式を決める
+    「"攻撃Entity名", "攻撃されるEntity名", "AIプライオリティ"」くらいかなぁ
+  - [ ] Configファイルの読込を実装する
+
+3. [x] 設定すべき Entity 名を調べる方法を提供する
+  - [x] 対象Entity を右クリックで、チャットに Entity 名が表示されるアイテムを追加する(Creativeのみ)
+
+---

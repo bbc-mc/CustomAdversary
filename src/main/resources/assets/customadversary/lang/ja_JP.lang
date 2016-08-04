@@ -1,0 +1,9 @@
+//
+// System
+//
+itemGroup.customadversary=Custom Adversary
+
+//
+// Item
+//
+item.customadversary_debugtool.name=デバッグ用 (名前を知りたい Entity を右クリックしてください)

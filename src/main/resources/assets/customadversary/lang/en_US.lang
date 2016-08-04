@@ -1,0 +1,10 @@
+//
+// System
+//
+itemGroup.customadversary=Custom Adversary
+
+//
+// Item
+//
+item.customadversary_debugtool.name=Debug tool (Right click Entity to get Name!)
+

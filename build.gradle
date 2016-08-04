@@ -1,0 +1,30 @@
+[compileJava, compileTestJava].each{
+    it.options.encoding = 'UTF-8'
+    it.options.compilerArgs += ['-source', '1.8', '-target', '1.8']
+}
+
+sourceSets.main {
+    java.srcDirs project.projectDir.name
+    resources.srcDirs project.projectDir.name
+}
+
+//
+// Version settings
+//
+final String MC_VERSION = "1.9.4"
+final String RELEASE_VERSION = "1.0.0"
+
+//
+// Auto generate archive name with Git branch name
+//
+String branch = ["sh", "-c", "cd ../${project.projectDir.name}; git rev-parse --abbrev-ref HEAD"].execute().text.trim()
+
+if (branch == "master" || branch == "") {
+    version = MC_VERSION + "-" + RELEASE_VERSION
+} else {
+    version = MC_VERSION + "-" + RELEASE_VERSION + "-" + branch
+}
+
+println("Archive   : ${archivesBaseName}-${version}")
+println("MC_VERSION: ${MC_VERSION}")
+println("RELEASE   : ${RELEASE_VERSION}")

@@ -1,0 +1,42 @@
+# gitignore file.
+#
+
+## Eclipse setting file
+.settings
+bin
+build
+eclipse
+.classpath
+.project
+
+## GIT setting file
+# .gitignore
+
+## Gradle files
+.gradle
+gradle
+#build.gradle
+*.txt
+gradlew
+gradlew.bat
+
+## idea project file
+.idea
+*.iml
+out
+
+## debug run folder
+config
+crash-reports
+logs
+mods
+resourcepacks
+saves
+screenshots
+usercache.json
+usernamecache.json
+
+# DO NOT IGNORE files below
+!document/*
+
+nouse
