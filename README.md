@@ -20,7 +20,7 @@
 ## config.json sample
 
 -- from here --
-'''
+```
 [
   {
     "attacker": "Zombie",
@@ -49,5 +49,5 @@
     "onlyNearby": false
   }
 ]
-'''
+```
 -- file end here --
