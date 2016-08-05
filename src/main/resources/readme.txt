@@ -41,6 +41,7 @@
   @seealso EntityList.class
   
   1-5.条件から、指定しても使用できないEntity名があるので、注意が必要。
+  Minecart とかは、EntityLiving 系列ではないので、指定できない
 
   EntityItem.class, "Item"
   EntityXPOrb.class, "XPOrb"
